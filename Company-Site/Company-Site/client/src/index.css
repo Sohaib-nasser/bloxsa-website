@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Bloxsa Branding Colors */
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(218 69% 26%); /* #153771 - Dark Blue */
+  
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(218 69% 26%);
+  
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(218 69% 26%);
+  
+  --color-primary: hsl(190 100% 32%); /* #0086a2 - Teal */
+  --color-primary-foreground: hsl(0 0% 100%);
+  
+  --color-secondary: hsl(218 69% 26%); /* #153771 - Dark Blue */
+  --color-secondary-foreground: hsl(0 0% 100%);
+  
+  --color-muted: hsl(0 0% 96%);
+  --color-muted-foreground: hsl(0 0% 73%); /* #b9b9b9 - Light Gray */
+  
+  --color-accent: hsl(190 100% 32% / 0.1);
+  --color-accent-foreground: hsl(190 100% 32%);
+  
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  
+  --color-border: hsl(0 0% 73% / 0.3); /* #b9b9b9 with opacity */
+  --color-input: hsl(0 0% 73% / 0.3);
+  --color-ring: hsl(190 100% 32%);
+  
+  --color-chart-1: hsl(190 100% 32%);
+  --color-chart-2: hsl(218 69% 26%);
+  
+  --font-sans: 'Cairo', sans-serif;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #153771;
+  }
+}
+
+@layer utilities {
+  .logo-mix-blend {
+    mix-blend-mode: multiply;
+  }
+}
